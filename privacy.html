@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>개인정보처리방침 | 아이러브뷰티</title>
+  <meta name="description" content="아이러브뷰티 개인정보처리방침. 수집하는 개인정보 항목, 이용 목적, 보유 기간 및 제3자 제공에 관한 안내입니다." />
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-4760960562805818">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4760960562805818"
+     crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --bg: #fff;
+      --bg-sub: #fafafa;
+      --text: #111;
+      --text-muted: #444;
+      --text-light: #666;
+      --border: #eee;
+      --header-bg: rgba(255,255,255,0.92);
+      --accent: #c60021;
+      --toggle-bg: #e5e7eb;
+      --toggle-knob: #fff;
+    }
+    [data-theme="dark"] {
+      --bg: #0f0f0f;
+      --bg-sub: #161616;
+      --text: #f0f0f0;
+      --text-muted: #b0b0b0;
+      --text-light: #888;
+      --border: #2a2a2a;
+      --header-bg: rgba(15,15,15,0.92);
+      --accent: #e8003a;
+      --toggle-bg: #c60021;
+      --toggle-knob: #fff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.8;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container { width: 90%; max-width: 860px; margin: 0 auto; }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--header-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .nav {
+      height: 68px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
+    .logo span { color: var(--accent); }
+
+    .theme-toggle {
+      width: 52px; height: 28px;
+      border-radius: 999px;
+      background: var(--toggle-bg);
+      border: none; cursor: pointer;
+      position: relative;
+      transition: background 0.3s;
+    }
+    .theme-toggle::after {
+      content: "";
+      position: absolute; top: 3px; left: 3px;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--toggle-knob);
+      transition: transform 0.3s;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+    [data-theme="dark"] .theme-toggle::after { transform: translateX(24px); }
+    .theme-toggle .icon {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      font-size: 12px; pointer-events: none;
+    }
+    .theme-toggle .icon-sun { left: 5px; }
+    .theme-toggle .icon-moon { right: 5px; }
+
+    .content {
+      padding: 70px 0 100px;
+    }
+
+    .content h1 {
+      font-size: 36px;
+      letter-spacing: -1.5px;
+      margin-bottom: 10px;
+    }
+
+    .updated {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 56px;
+    }
+
+    .content h2 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin: 48px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    .content ul, .content ol {
+      color: var(--text-muted);
+      font-size: 15px;
+      padding-left: 22px;
+      margin-bottom: 14px;
+      display: grid;
+      gap: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 16px 0 24px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      text-align: left;
+      vertical-align: top;
+      color: var(--text-muted);
+    }
+    th {
+      background: var(--bg-sub);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 36px;
+    }
+    .back-link:hover { color: var(--accent); }
+
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+      color: var(--text-light);
+      font-size: 13px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">아이러브<span>뷰티</span></a>
+      <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">
+        <span class="icon icon-sun">☀️</span>
+        <span class="icon icon-moon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container content">
+      <a href="index.html" class="back-link">← 홈으로 돌아가기</a>
+
+      <h1>개인정보처리방침</h1>
+      <p class="updated">최종 업데이트: 2024년 12월 1일</p>
+
+      <p>
+        아이러브뷰티(이하 "당사")는 이용자의 개인정보를 중요하게 생각하며,
+        「개인정보 보호법」을 준수합니다. 본 방침은 당사 웹사이트
+        (https://sineadlee1210.github.io/ilovebeauty/)에서 수집하는 개인정보의
+        처리 방법을 설명합니다.
+      </p>
+
+      <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
+      <p>당사는 문의 폼을 통해 다음 개인정보를 수집합니다.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>수집 항목</th>
+            <th>필수 여부</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>문의 접수</td>
+            <td>이름 또는 업체명, 이메일 주소</td>
+            <td>필수</td>
+          </tr>
+          <tr>
+            <td>문의 접수</td>
+            <td>연락처(전화번호), 문의 유형, 문의 내용</td>
+            <td>선택</td>
+          </tr>
+          <tr>
+            <td>서비스 이용</td>
+            <td>접속 IP 주소, 쿠키, 방문 일시 (Google Analytics 자동 수집)</td>
+            <td>자동</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>2. 개인정보의 수집 및 이용 목적</h2>
+      <ul>
+        <li>제휴·교육·시술 문의에 대한 상담 및 답변 제공</li>
+        <li>서비스 이용 통계 분석 및 사이트 개선</li>
+        <li>광고 효율 측정 (Google AdSense 관련)</li>
+      </ul>
+
+      <h2>3. 개인정보의 보유 및 이용 기간</h2>
+      <p>
+        수집된 개인정보는 문의 처리 완료 후 <strong>1년간</strong> 보관하며,
+        이후 지체 없이 파기합니다. 단, 관련 법령에 따라 보존이 필요한 경우
+        해당 기간 동안 별도 보관합니다.
+      </p>
+      <table>
+        <thead>
+          <tr><th>보존 근거 법령</th><th>보존 항목</th><th>보존 기간</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>전자상거래법</td><td>소비자 불만 또는 분쟁처리에 관한 기록</td><td>3년</td></tr>
+          <tr><td>통신비밀보호법</td><td>웹사이트 방문에 관한 로그 기록</td><td>3개월</td></tr>
+        </tbody>
+      </table>
+
+      <h2>4. 개인정보의 제3자 제공</h2>
+      <p>
+        당사는 원칙적으로 이용자의 개인정보를 제3자에게 제공하지 않습니다.
+        단, 아래의 경우에는 예외입니다.
+      </p>
+      <ul>
+        <li>이용자가 사전에 동의한 경우</li>
+        <li>법령의 규정에 의하거나 수사기관의 요청이 있는 경우</li>
+      </ul>
+
+      <h2>5. 개인정보 처리 위탁</h2>
+      <p>당사는 원활한 서비스 제공을 위해 아래와 같이 개인정보 처리를 위탁하고 있습니다.</p>
+      <table>
+        <thead>
+          <tr><th>수탁 업체</th><th>위탁 업무</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Formspree, Inc.</td><td>문의 폼 접수 및 이메일 전송</td></tr>
+          <tr><td>Google LLC</td><td>웹사이트 분석(Google Analytics), 광고 제공(Google AdSense)</td></tr>
+          <tr><td>GitHub, Inc.</td><td>웹사이트 호스팅(GitHub Pages)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>6. 쿠키(Cookie) 사용 안내</h2>
+      <p>
+        당사 웹사이트는 Google Analytics 및 Google AdSense를 통해 쿠키를 사용합니다.
+        쿠키는 이용자의 사이트 방문 패턴을 분석하고, 맞춤형 광고를 제공하기 위해 사용됩니다.
+      </p>
+      <p>
+        이용자는 브라우저 설정에서 쿠키 수집을 거부할 수 있습니다.
+        (브라우저 설정 → 개인정보 및 보안 → 쿠키 및 기타 사이트 데이터)
+        단, 쿠키를 거부할 경우 일부 서비스 이용이 제한될 수 있습니다.
+      </p>
+      <p>
+        Google의 광고 쿠키 사용에 대한 자세한 내용은
+        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener" style="color:var(--accent);">Google 광고 정책</a>을 참고하시기 바랍니다.
+      </p>
+
+      <h2>7. 이용자의 권리</h2>
+      <p>이용자는 언제든지 다음의 권리를 행사할 수 있습니다.</p>
+      <ul>
+        <li>개인정보 열람 요청</li>
+        <li>개인정보 정정·삭제 요청</li>
+        <li>개인정보 처리 정지 요청</li>
+      </ul>
+      <p>
+        권리 행사는 아래 개인정보 보호책임자에게 이메일로 문의해 주시면
+        지체 없이 처리하겠습니다.
+      </p>
+
+      <h2>8. 개인정보 보호책임자</h2>
+      <table>
+        <tbody>
+          <tr><td><strong>성명</strong></td><td>아이러브뷰티 운영자</td></tr>
+          <tr><td><strong>이메일</strong></td><td>sineadlee1210@gmail.com</td></tr>
+          <tr><td><strong>소재지</strong></td><td>경기도 남양주시 다산동</td></tr>
+        </tbody>
+      </table>
+      <p>
+        개인정보 처리에 관한 불만이나 피해 구제를 원하시는 경우,
+        개인정보 분쟁조정위원회(www.kopico.go.kr) 또는 개인정보침해신고센터(privacy.kisa.or.kr)에
+        문의하실 수 있습니다.
+      </p>
+
+      <h2>9. 개인정보처리방침의 변경</h2>
+      <p>
+        본 방침은 법령 또는 서비스 변경에 따라 개정될 수 있으며,
+        변경 시 웹사이트 공지사항을 통해 고지합니다.
+        시행일: 2024년 12월 1일
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2024 ILOVE BEAUTY. All rights reserved. · 경기도 남양주시 다산동</p>
+      <a href="index.html">홈으로</a>
+    </div>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+    const btn = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    html.setAttribute('data-theme', saved);
+    btn.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+
+</body>
+</html>
