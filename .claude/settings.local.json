@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "WebFetch(domain:adsense-ko.googleblog.com)",
+      "Bash(python3)",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}
